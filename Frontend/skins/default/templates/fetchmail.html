@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title><roundcube:object name="pagetitle" /></title>
+<roundcube:include file="/includes/links.html" />
+<link rel="stylesheet" type="text/css" href="/settings.css" />
+<link rel="stylesheet" type="text/css" href="/this/fetchmail.css" />
+<script type="text/javascript" src="/functions.js"></script>
+</head>
+<body>
+
+<roundcube:include file="/includes/taskbar.html" />
+<roundcube:include file="/includes/header.html" />
+<roundcube:include file="/includes/settingstabs.html" />
+
+<div id="prefsscreen">
+	<div id="myprefs">
+
+		<div id="myform">
+		<form name="fetchmailform" action="./?_task=settings&_action=plugin.ispcp_fetchmail.save" method="post">
+		<roundcube:object name="fetchmail_form" />
+		</form>
+		</div>
+
+		<div id="mybuttons">
+			<roundcube:button command="plugin.ispcp_fetchmail.save" type="input" class="button mainaction" label="save" />
+			<roundcube:button command="plugin.ispcp_fetchmail" type="input" class="button mainaction" label="cancel" />
+		</div>
+
+		<div id="mytable">
+		<roundcube:object name="fetchmail_table" class="fetchmail-table" cellspacing="0" deleteIcon="/this/delete.png" enableIcon="/this/enabled.png" disableIcon="/this/disabled.png" />
+		</div>
+
+	</div>
+</div>
+
+</body>
+</html>
